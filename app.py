@@ -2,7 +2,7 @@ from flask import Flask,render_template,request
 import os
 import joblib as jb
 
-app = Flask(__name__,template_folder="C:\PYTHON\Machine Learning\Titanic\\templates")
+app = Flask(__name__)
 
 
 @app.route("/",methods = ['GET'])
