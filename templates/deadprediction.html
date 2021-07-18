@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>depth prediction</title>
+    <style>
+        
+
+        form {
+            text-align: center;
+            padding: 20px;
+            }
+        input {
+            width: 20%;
+        }
+
+        #c1{
+            text-align: center;
+            color:#F0E68C;
+        }
+        body {
+            background-image: url("https://images7.alphacoders.com/324/324384.jpg");
+            background-size: cover;
+            height: 100%;
+            position: fixed; top: 0; left: 0;
+            width: 100%;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="{{ url_for('predict')}}"method="post">
+        <div id="c1">
+            <h1>Titanic Death Prediction</h1>
+        </div>
+        <div>
+            <form action="" >
+                <input type="text" placeholder="P-class" name="p-class" required="required" />
+                <br>
+                <br>
+                <input type="text" placeholder="Age" name="Age" required="required" />
+                <br>
+                <br>
+                <input type="text" placeholder="Fare" name="Fare" required="required" />
+                <br>
+                <br>
+                <label for="">Gender</label>
+                <select name="Gender" id="">
+                    <option value="0">male</option>
+                    <option value="1">female</option>
+                </select>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
