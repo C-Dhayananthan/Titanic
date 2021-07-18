@@ -16,7 +16,7 @@ def predict():
         age = float(request.form.get("Age"))
         fare = float(request.form.get("Fare"))
         gender = float(request.form.get("Gender"))
-        loaded_model = jb.load("C:\PYTHON\Machine Learning\Titanic\env\death_model2")
+        loaded_model = jb.load("death_model2")
         prediction = loaded_model.predict_proba([[pclass,age,fare,gender]])[0][1]
         return render_template("predict.html",prediction = round(100*prediction))
     else :
